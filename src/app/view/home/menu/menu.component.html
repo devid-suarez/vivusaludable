@@ -1,0 +1,8 @@
+<div class="menu-container">
+    <h1>Menú</h1>
+    <app-search (searchTextChange)="onSearchText($event)"></app-search>
+    <app-categories [categories]="categories" (selectedCategory)="onSelectedCategory($event)"></app-categories>
+    <div class="item-menu-container">
+        <app-menu-item *ngFor="let item of filteredItems" [item]="item"></app-menu-item>
+    </div>
+</div>

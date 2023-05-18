@@ -1,0 +1,41 @@
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    transition: opacity 0.5s;
+    cursor: default;
+}
+
+.carousel img:hover {
+    cursor: grab;
+}
+
+.carousel overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel h1,
+.carousel h2 {
+    color: #fff;
+}

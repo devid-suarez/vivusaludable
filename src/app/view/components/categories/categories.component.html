@@ -1,0 +1,11 @@
+<div class="category-container">
+    <div
+      *ngFor="let category of categories; let i = index"
+      [ngClass]="{'selected': selectedIndex === i}"
+      (click)="selectCategory(i, category)"
+    >
+      {{ category.name }}
+      <span *ngIf="i < categories.length - 1" class="divider">|</span>
+    </div>
+  </div>
+  

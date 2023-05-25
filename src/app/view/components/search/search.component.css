@@ -1,15 +1,12 @@
 .search-container {
-    width: 100%;
     position: relative;
-}
-
-.search-icon {
-    left: 15px;
+    width: 100%;
 }
 
 .trash-icon {
-    right: 15px;
+    color:#d62828;
 }
+
 
 .search-icon-hidden,
 .trash-icon-hidden {
@@ -19,19 +16,20 @@
 
 .search-icon,
 .trash-icon {
+    right: 15px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: opacity 0.3s;
 }
 
 input {
-    width: 100%;
+    width: 90%;
     border-radius: 25px;
     border: none;
-    padding: 10px 40px;
+    padding: 10px 5%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     outline: none;
     transition: box-shadow 0.3s;

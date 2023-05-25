@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
   images: string[] = [
-    'assets/banners/imagen_1.jpg',
+    'assets/banners/background_table.webp',
     'assets/banners/imagen_2.jpg',
   ];
   currentIndex: number = 0;
-  titles: string[] = ['Título 1', 'Título 2', 'Título 3'];
-  subtitles: string[] = ['Subtítulo 1', 'Subtítulo 2', 'Subtítulo 3'];
+  titles: string[] = ['Reservas para el día de la madre', '', ''];
+  subtitles: string[] = ['', '', ''];
 
   ngOnInit(): void {
     setInterval(() => {

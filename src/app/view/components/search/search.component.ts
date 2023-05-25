@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-search',
@@ -7,10 +8,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   @Output() searchTextChange: EventEmitter<string> = new EventEmitter();
-
   searchText: string = "";
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +21,15 @@ export class SearchComponent implements OnInit {
 
   onBlur() {
     this.searchTextChange.emit(this.searchText);
+  }
+
+  textChange(text: string) {
+    this.searchTextChange.emit(text);
+    const element = document.querySelector('#menu');
+    if (element) {
+      this.viewportScroller.scrollToAnchor('menu');
+      window.scrollBy(0, -60);
+    }
   }
 
   clearSearchText() {

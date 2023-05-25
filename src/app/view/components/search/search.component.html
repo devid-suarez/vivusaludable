@@ -1,13 +1,6 @@
 <div class="search-container">
-    <input
-      [(ngModel)]="searchText"
-      (ngModelChange)="searchTextChange.emit(searchText)"
-      (focus)="onFocus()"
-      (blur)="onBlur()"
-      type="text"
-      placeholder="Buscar"
-    />
-    <i class="search-icon" [ngClass]="{'search-icon-hidden': searchText.length > 0}" (click)="clearSearchText()"></i>
-    <i class="trash-icon" [ngClass]="{'trash-icon-hidden': searchText.length === 0}" (click)="clearSearchText()"></i>
-  </div>
-  
+    <input [(ngModel)]="searchText" (ngModelChange)="textChange(searchText)" (focus)="onFocus()"
+        (blur)="onBlur()" type="text" placeholder="Buscar" />
+        <mat-icon class="search-icon" [ngClass]="{'search-icon-hidden': searchText.length > 0}" (click)="clearSearchText()">search</mat-icon> 
+        <mat-icon class="trash-icon" [ngClass]="{'trash-icon-hidden': searchText.length === 0}" (click)="clearSearchText()">delete</mat-icon>  
+</div>

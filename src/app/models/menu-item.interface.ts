@@ -3,8 +3,8 @@ export interface MenuItemInterface {
     id: number,
     name: string,
     price: number,
+    imagePath?: string,
     description: string,
     ingredients: string,
     category: CategoryInterface,
-    imageUrl?: string,
 }

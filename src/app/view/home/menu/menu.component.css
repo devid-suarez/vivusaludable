@@ -5,15 +5,52 @@
     align-items: center;
 }
 
+
+
+.menu-container h1 {
+    margin-block: 1rem;
+}
+
+mat-tab-group {
+    width: 100%;
+}
+
 .item-menu-container {
     display: flex;
     flex-wrap: wrap;
+    margin-block: 1rem;
     justify-content: center;
     gap: 1rem;
+}
+
+app-search {
+    width: 100%;
+    position: sticky;
+    top: 65px;
+    z-index: 989;
 }
 
 h1 {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+/* position: sticky;
+top: 90px;
+z-index: 993; */
+
+@media (min-width: 576px) {
+    app-search {
+        width: 80%;
+    }
+
+    .menu-container h1 {
+        margin-block: 2rem;
+    }
+
+    mat-tab-group {
+        display: grid;
+        place-items: center;
+    }
 }

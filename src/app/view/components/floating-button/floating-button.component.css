@@ -1,0 +1,37 @@
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    color: white;
+    z-index: 996;
+}
+
+.floating-button span {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 0px;
+}
+
+.button-icon {
+    background-color: green;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button-icon:hover {
+    background-color: darkgreen;
+}

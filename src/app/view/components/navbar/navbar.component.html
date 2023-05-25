@@ -1,0 +1,9 @@
+<mat-toolbar class="navbar">
+    <button mat-button class="logo-container" disabled>
+        <img src="./assets/logos/logo_white.webp" alt="Logo" class="logo">
+    </button>
+    <app-menu-navigation></app-menu-navigation>
+    <button mat-button class="menu" *ngIf="isSmallScreen" (click)="onClickMenu()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>

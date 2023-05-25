@@ -3,6 +3,7 @@
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: white;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -20,7 +21,7 @@
     object-fit: cover;
 }
 
-.image-container title {
+.image-container .title {
     position: absolute;
     bottom: 0;
     left: 0;

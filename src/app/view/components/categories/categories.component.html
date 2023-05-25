@@ -1,11 +1,10 @@
 <div class="category-container">
-    <div
-      *ngFor="let category of categories; let i = index"
-      [ngClass]="{'selected': selectedIndex === i}"
-      (click)="selectCategory(i, category)"
-    >
-      {{ category.name }}
-      <span *ngIf="i < categories.length - 1" class="divider">|</span>
-    </div>
+
+    <mat-tab-group animationDuration="2000ms"   >
+        <mat-tab label="{{category.name}}"  *ngFor="let category of categories; let i = index" >11</mat-tab>
+
+      </mat-tab-group>
+
+
   </div>
   

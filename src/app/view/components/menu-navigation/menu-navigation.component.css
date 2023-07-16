@@ -23,7 +23,7 @@
 
     .nav-links button {
         &:hover {
-            color: #007A9F;
+            color: var(--blue-color);
         }
     }
 }

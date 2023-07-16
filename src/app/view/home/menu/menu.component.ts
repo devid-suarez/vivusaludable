@@ -27,11 +27,11 @@ export class MenuComponent {
   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation";
 
   items: MenuItemInterface[] = [
-    { id: 1, price: 15000, name: 'Cebolla apanada', description: this.description, ingredients: "", category: { id: 2, name: "" }, imagePath: "./assets/menu/cebolla.png"},
-    { id: 2, price: 20000, name: 'Costillitas de res', description: this.description, ingredients: "", category: { id: 1, name: "" }, imagePath: "./assets/menu/costilla.png" },
-    { id: 3, price: 8000, name: 'Limonada de coco', description: this.description, ingredients: "", category: { id: 3, name: "" }, imagePath: "./assets/menu/jugo.png" },
-    { id: 4, price: 25000, name: 'Nuguets de pollo', description: this.description, ingredients: "", category: { id: 2, name: "" }, imagePath: "./assets/menu/nuguet.png" },
-    { id: 5, price: 22000, name: 'Sandwich', description: this.description, ingredients: "", category: { id: 1, name: "" }, imagePath: "./assets/menu/sandwich.png" },
+    { id: 1, price: 15, name: 'Cebolla apanada', description: this.description, ingredients: "", category: { id: 2, name: "" }, imagePath: "./assets/menu/cebolla.png"},
+    { id: 2, price: 20, name: 'Costillitas de res', description: this.description, ingredients: "", category: { id: 1, name: "" }, imagePath: "./assets/menu/costilla.png" },
+    { id: 3, price: 8, name: 'Limonada de coco', description: this.description, ingredients: "", category: { id: 3, name: "" }, imagePath: "./assets/menu/jugo.png" },
+    { id: 4, price: 25, name: 'Nuguets de pollo', description: this.description, ingredients: "", category: { id: 2, name: "" }, imagePath: "./assets/menu/nuguet.png" },
+    { id: 5, price: 22, name: 'Sandwich', description: this.description, ingredients: "", category: { id: 1, name: "" }, imagePath: "./assets/menu/sandwich.png" },
   ];
 
   filteredItems = this.items;

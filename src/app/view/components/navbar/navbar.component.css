@@ -6,13 +6,13 @@
   top: 0;
   z-index: 990;
   height: 60px;
-  background-color: #007A9F;
+  background-color: var(--primary-color);
 }
 
 .menu mat-icon{
   color: white;
   &:hover {
-    color: #F9BA14;
+    color: var(--secondary-color);
   }
 }
 

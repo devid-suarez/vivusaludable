@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { MaterialModuleImports } from './utils/material.module';
 
@@ -16,6 +16,8 @@ import { NavbarComponent } from './view/components/navbar/navbar.component';
 import { SidenavComponent } from './view/components/sidenav/sidenav.component';
 import { MenuNavigationComponent } from './view/components/menu-navigation/menu-navigation.component';
 import { FloatingButtonComponent } from './view/components/floating-button/floating-button.component';
+import { HammerModule } from '@angular/platform-browser';
+import { HammerConfig } from './utils/hammer-config.module';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,13 @@ import { FloatingButtonComponent } from './view/components/floating-button/float
     BrowserModule,
     FormsModule,
     MaterialModuleImports,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HammerModule
   ],
-  providers: [],
+  providers: [{
+    provide: HAMMER_GESTURE_CONFIG,
+    useClass: HammerConfig,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

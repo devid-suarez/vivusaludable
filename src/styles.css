@@ -10,10 +10,15 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+:root {
+    --primary-color: #007A9F;
+    --secondary-color: #F9BA14;
+}
+
 .mat-tab-group.mat-primary .mat-ink-bar {
-    background-color: #007A9F;
+    background-color: var(--primary-color);
 }
 
 .mat-tab-header .mat-tab-label.mat-tab-label-active {
-    color: #007A9F;
+    color: var(--primary-color);
 }

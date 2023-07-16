@@ -20,7 +20,7 @@ app-banner {
 }
 
 .about {
-    background-color: #F9BA14;
+    background-color: var(--secondary-color);
     padding-inline: 2rem;
     padding-block: 3rem;
 }

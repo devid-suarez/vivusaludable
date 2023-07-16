@@ -14,6 +14,8 @@ export class BannerComponent implements OnInit {
   titles: string[] = ['Reservas para el día de la madre', '', ''];
   subtitles: string[] = ['', '', ''];
 
+
+  
   ngOnInit(): void {
     setInterval(() => {
       this.nextImage();
@@ -26,5 +28,22 @@ export class BannerComponent implements OnInit {
 
   previousImage(): void {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+  }
+
+  handleSwipe(event: any) {
+    const x = Math.abs(event.deltaX);
+    const y = Math.abs(event.deltaY);
+
+    if (x > y) {
+      this.passSlide(event.deltaX);
+    }
+  }
+
+  passSlide = (deltaX: number) => {
+      if (deltaX > 0) {
+        this.previousImage()
+      } else {
+        this.nextImage();
+      }
   }
 }

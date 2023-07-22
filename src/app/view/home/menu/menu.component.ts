@@ -18,21 +18,17 @@ interface searchValues {
 export class MenuComponent {
   @Input() selectedCategory!: CategoryInterface;
   @Input() searchText: string = "";
+  @Input() items: MenuItemInterface[] = [];
 
   categories: CategoryInterface[] = [];
 
-
-
-  items: MenuItemInterface[]  = [];
-
   filteredItems = this.items;
 
-  constructor(){
-    console.log(111);
+  constructor() {
     console.log(environment.company);
     this.categories = Data.COMPANIES[environment.company].categories;
     this.items = Data.COMPANIES[environment.company].menu;
-    
+
   };
 
   onSearchText(text: string) {
@@ -58,6 +54,7 @@ const filterValues = (item: MenuItemInterface, searchValues: searchValues) => {
 };
 
 const hasMatchValues = (value: any, item: MenuItemInterface, searchValues: searchValues) => {
+  console.log(searchValues.category)
   const text = searchValues.text.toLowerCase();
   const category = searchValues.category;
 

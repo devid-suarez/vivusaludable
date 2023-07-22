@@ -15,7 +15,18 @@ const COMPANIES: CompanyInterface[] = [
             { id: 3, price: 8, name: 'Limonada de coco', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation", ingredients: "", category: { id: 3, name: "" }, imagePath: "./assets/menu/default/jugo.png" },
             { id: 4, price: 25, name: 'Nuguets de pollo', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation", ingredients: "", category: { id: 2, name: "" }, imagePath: "./assets/menu/default/nuguet.png" },
             { id: 5, price: 22, name: 'Sandwich', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation", ingredients: "", category: { id: 1, name: "" }, imagePath: "./assets/menu/default/sandwich.png" },
-        ]
+        ],
+        banners: [
+            {
+                imagePath: "assets/banners/default/background_table.webp",
+            }
+        ],
+        logos: [],
+        brandColors: {
+            primary: "",
+            secondary: "",
+            tertiary: "",
+        }
     },
     {
         name: "vivu",
@@ -30,7 +41,29 @@ const COMPANIES: CompanyInterface[] = [
             { id: 3, price: 12000, name: 'Ensalada Campestre Huerto', description: "Pepino , lechuga, brócoli, plamitos, semillas, yogurt , naranja y aceite de oliva.", ingredients: "", category: { id: 1, name: "" }, imagePath: "./assets/menu/vivu/ensalada_campestre_huerto.webp" },
             { id: 4, price: 12000, name: 'Ensalada mediterranea con Pasta', description: "Pasta corta, tomates, aceitunas, jamón, huevo, albahaca, crema de leche, aceite de oliva.", ingredients: "", category: { id: 1, name: "" }, imagePath: "./assets/menu/vivu/ensalada_mediterranea_pasta.webp" },
             { id: 5, price: 15000, name: 'Ensalada London', description: "", ingredients: "Papa, champiñon, lechuga, pimentón, tocineta, pechuga, yogurt, mayonesa, perejil", category: { id: 1, name: "" }, imagePath: "./assets/menu/vivu/ensalada_mediterranea_pasta.webp" },
-        ]
+        ],
+        banners: [
+            {
+                imagePath: "assets/banners/vivu/banner_1.webp",
+            }
+        ],
+        logos: ["./assets/logos/vivu/logo_white.webp"],
+        brandColors: {
+            primary: "",
+            secondary: "",
+            tertiary: "",
+        },
+        aboutUs:{
+            whatsappNumber: "+57 320 8653754",
+            mission : "pendiente",
+            address: {
+                path:"pendiente",
+                url:""
+            },
+            email: "pendiente",
+            officeHours: ["pendiente"]
+
+        }
     }
 ];
 

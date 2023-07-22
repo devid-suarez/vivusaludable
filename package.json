@@ -6,7 +6,9 @@
     "start": "ng serve --o --port 4201",
     "start-vivu": "ng serve --o --configuration=vivu --port 4201",
     "build": "ng build --base-href https://devid-suarez.github.io/store-landing-page/",
+    "build-vivu": "ng build --base-href https://devid-suarez.github.io/vivusaludable/",
     "deploy": "ngh --dir dist/store-landing-page",
+    "deploy-vivu": "ngh --dir dist/store-landing-page --repo https://github.com/devid-suarez/vivusaludable.git",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

@@ -1,18 +1,19 @@
 <div class="about-container">
   <div class="about-us">
-    <img src="./assets/logos/logo_white.webp" alt="Imagen del plato">
-    <p>Somos un espacio familiar, acogedor con productos para toda la familia. Todos nuestros platos son de propios, con vegetales cultivados por La Quinta Jardin y productos provistos por empresas de la región.</p>
+    <img [src]="logo" alt="Imagen del plato">
+    <p>mission</p>
   </div>
 
   <div class="contact-info">
     <h2>Información de contacto</h2>
-    <p>Correo: <br><a href="mailto:laquintarestaurante3@gmail.com">laquintarestaurante3@gmail.com</a></p>
-    <p>Dirección: <br><a href="https://www.google.com/maps/search/?api=1&query=5.599255,-75.820848" target="_blank">Carrera 5 # 7 - 40 | Jardín, Antioquia</a></p>
+    <p>Correo: <br><a [href]="emailPath">{{email}}</a></p>
+    <p>Dirección: <br><a [href]="addressUrl"
+        target="_blank">{{addressPath}}</a></p>
     <!-- <p><b>Teléfono: </b><a href="tel:3002795942">300 279 5942</a></p> -->
     <!-- <p>Domicilios: <br><a href="https://wa.me/+573002795942" target="_blank">300 279 5942</a></p> -->
   </div>
 
-  <div class="working-hours">
+  <div class="working-hours" *ngIf="data && data.officeHours && data.officeHours.length > 0">
     <h2>Horario de Atención</h2>
     <p>Lunes a Viernes: 9am - 6pm</p>
     <p>Sábado: 10am - 4pm</p>

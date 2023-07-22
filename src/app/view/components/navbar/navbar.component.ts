@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class NavbarComponent {
   @Output() openSidenav = new EventEmitter<void>();
+  @Input () logo : string = "";
   isSmallScreen = true;
   logoClicked() {
   }
@@ -14,6 +15,7 @@ export class NavbarComponent {
   onClickMenu() {
     this.openSidenav.emit();
   }
+  
   // ngAfterViewInit() {
   //   this.sidenav.closedStart.subscribe(() => {
   //     this.sidenavOpened = false;

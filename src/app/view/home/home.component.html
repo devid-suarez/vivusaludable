@@ -1,14 +1,14 @@
-<main >
+<main>
     <section class="banner" id="home">
-        <app-banner></app-banner>
+        <app-banner [banners]="banners"></app-banner>
     </section>
 
     <section class="menu" id="menu">
-        <app-menu></app-menu>
+        <app-menu [items]="menu"></app-menu>
     </section>
 
-    <section class="about" id="about-us">
-        <app-about-us></app-about-us>
+    <section class="about" id="about-us" *ngIf="aboutUs != undefined">
+        <app-about-us [data]="aboutUs" [logo]="logo"></app-about-us>
     </section>
-    <app-floating-button></app-floating-button>
+    <app-floating-button [whatsAppNumber] = "whatsAppNumber"></app-floating-button>
 </main>

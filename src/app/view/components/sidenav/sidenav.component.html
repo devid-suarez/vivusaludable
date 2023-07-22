@@ -3,11 +3,11 @@
         <button mat-icon-button (click)="closeSidenav()" class="close-button">
             <mat-icon>close</mat-icon>
         </button>
-        <img src="./assets/logos/logo_white.webp" alt="Logo" class="logo" >
+        <img [src]="logo" alt="Logo" class="logo" >
         <app-menu-navigation  (closeSidenav)="closeSidenav()"></app-menu-navigation>
     </mat-sidenav>
     <mat-sidenav-content>
-        <app-navbar (openSidenav)="openSidenav()"></app-navbar>
-        <app-home></app-home>
+        <app-navbar (openSidenav)="openSidenav()" [logo] = "logo"></app-navbar>
+        <app-home [data] = "data"></app-home>
     </mat-sidenav-content>
 </mat-sidenav-container>

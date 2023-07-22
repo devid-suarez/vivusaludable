@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { BannerInterface } from 'src/app/models/banner.interface';
 
 @Component({
   selector: 'app-banner',
@@ -6,16 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
+
+  @Input() banners: BannerInterface[] = [];
+
   images: string[] = [
-    'assets/banners/background_table.webp',
-    'assets/banners/imagen_2.jpg',
+    'assets/banners/vivu/banner_1.webp',
   ];
   currentIndex: number = 0;
-  titles: string[] = ['Reservas para el día de la madre', '', ''];
+  titles: string[] = ['', '', ''];
   subtitles: string[] = ['', '', ''];
 
 
-  
+
   ngOnInit(): void {
     setInterval(() => {
       this.nextImage();
@@ -40,10 +43,10 @@ export class BannerComponent implements OnInit {
   }
 
   passSlide = (deltaX: number) => {
-      if (deltaX > 0) {
-        this.previousImage()
-      } else {
-        this.nextImage();
-      }
+    if (deltaX > 0) {
+      this.previousImage()
+    } else {
+      this.nextImage();
+    }
   }
 }

@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import { MatTabChangeEvent } from '@angular/material/tabs';
 import { CategoryInterface } from 'src/app/models/category.inteface';
 import { MenuItemInterface } from 'src/app/models/menu-item.interface';
+import { environment } from 'src/environments/environment';
+import { Data } from 'src/app/utils/data.utils';
 
 interface searchValues {
   text: string,
@@ -17,24 +19,21 @@ export class MenuComponent {
   @Input() selectedCategory!: CategoryInterface;
   @Input() searchText: string = "";
 
-  categories: CategoryInterface[] = [
-    { id: 0, name: "Todo" },
-    { id: 1, name: 'Carnes' },
-    { id: 2, name: 'Entradas' },
-    { id: 3, name: 'Jugos' }
-  ];
+  categories: CategoryInterface[] = [];
 
-  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation";
 
-  items: MenuItemInterface[] = [
-    { id: 1, price: 15, name: 'Cebolla apanada', description: this.description, ingredients: "", category: { id: 2, name: "" }, imagePath: "./assets/menu/cebolla.png"},
-    { id: 2, price: 20, name: 'Costillitas de res', description: this.description, ingredients: "", category: { id: 1, name: "" }, imagePath: "./assets/menu/costilla.png" },
-    { id: 3, price: 8, name: 'Limonada de coco', description: this.description, ingredients: "", category: { id: 3, name: "" }, imagePath: "./assets/menu/jugo.png" },
-    { id: 4, price: 25, name: 'Nuguets de pollo', description: this.description, ingredients: "", category: { id: 2, name: "" }, imagePath: "./assets/menu/nuguet.png" },
-    { id: 5, price: 22, name: 'Sandwich', description: this.description, ingredients: "", category: { id: 1, name: "" }, imagePath: "./assets/menu/sandwich.png" },
-  ];
+
+  items: MenuItemInterface[]  = [];
 
   filteredItems = this.items;
+
+  constructor(){
+    console.log(111);
+    console.log(environment.company);
+    this.categories = Data.COMPANIES[environment.company].categories;
+    this.items = Data.COMPANIES[environment.company].menu;
+    
+  };
 
   onSearchText(text: string) {
     this.searchText = text;

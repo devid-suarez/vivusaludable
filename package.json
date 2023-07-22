@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --o --port 4201",
-    "build": "ng build",
-    "ghp-build": "ng build --base-href https://devid-suarez.github.io/store-landing-page/",
-    "ghp-deploy": "ngh --dir dist/store-landing-page",
+    "start-vivu": "ng serve --o --configuration=vivu --port 4201",
+    "build": "ng build --base-href https://devid-suarez.github.io/store-landing-page/",
+    "deploy": "ngh --dir dist/store-landing-page",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
